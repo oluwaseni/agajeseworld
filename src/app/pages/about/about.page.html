@@ -1,0 +1,125 @@
+<app-page-hero
+  tag="About AGAJESEWORLD"
+  title="We Help Organizations Take Control of Their <em>Technology Future.</em>"
+  subtitle="A multidisciplinary technology and engineering company delivering integrated solutions across energy, ICT, security, and research-driven innovation."
+  imgUrl="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&auto=format&fit=crop&q=80"
+  [breadcrumbs]="[{ label: 'About Us' }]"
+></app-page-hero>
+
+<!-- MISSION & VISION -->
+<section class="mv-section">
+  <div class="container">
+    <div class="mv-grid reveal">
+      <div class="mv-card accent">
+        <span class="mv-icon">🎯</span>
+        <h3>Our Mission</h3>
+        <p>To deliver reliable, innovative, and high-quality solutions in energy systems, electrical engineering, ICT infrastructure, and security technologies, while fostering innovation through research and invention.</p>
+      </div>
+      <div class="mv-card blue">
+        <span class="mv-icon">🌍</span>
+        <h3>Our Vision</h3>
+        <p>To become a leading African technology and engineering company providing sustainable energy, advanced digital infrastructure, secure environments, and innovative technologies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="who-section">
+  <div class="container">
+    <div class="who-grid">
+      <div class="who-images reveal">
+        <div class="img-stack">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&auto=format&fit=crop&q=80" alt="Technology solutions" class="img-main" />
+          <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=400&auto=format&fit=crop&q=80" alt="Solar energy" class="img-secondary" />
+        </div>
+      </div>
+      <div class="who-text reveal d1">
+        <span class="label-tag">Who We Are</span>
+        <h2 class="section-title">Multidisciplinary Engineering & <em>Technology Excellence</em></h2>
+        <p>AGAJESEWORLD is organized across four core divisions, enabling it to provide comprehensive solutions for residential, commercial, and industrial clients.</p>
+        <p>Our expertise covers power systems, ICT infrastructure, smart security solutions, electrical installations, and research-driven technological inventions — all delivered by a team of experienced engineers and technicians.</p>
+        <ul class="check-list">
+          <li>Experienced engineers and technicians across all divisions</li>
+          <li>Integrated multi-disciplinary expertise under one roof</li>
+          <li>Reliable project delivery with full quality assurance</li>
+          <li>High-quality equipment and industry-standard systems</li>
+          <li>Competitive, transparent pricing on every project</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="label-tag">What We Stand For</span>
+      <h2 class="section-title">Our Core <em>Values</em></h2>
+    </div>
+    <div class="values-grid reveal d1">
+      <div class="value-card" *ngFor="let v of values">
+        <div class="value-icon-wrap">{{ v.icon }}</div>
+        <h3>{{ v.name }}</h3>
+        <p>{{ v.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES / JOURNEY -->
+<section class="journey-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-tag blue">Our Journey</span>
+      <h2 class="section-title">Building a Legacy of <em>Innovation</em></h2>
+    </div>
+    <div class="milestones reveal d1">
+      <div class="milestone" *ngFor="let m of milestones; let i = index">
+        <div class="milestone-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line" *ngIf="i < milestones.length - 1"></div>
+        </div>
+        <div class="milestone-content">
+          <span class="milestone-year">{{ m.year }}</span>
+          <p>{{ m.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM STRUCTURE -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="label-tag">Our Team</span>
+      <h2 class="section-title">Built by <em>Experts</em></h2>
+      <p class="section-sub" style="margin:0 auto">A lean, multi-skilled team of engineers, developers, and innovators driving every project forward.</p>
+    </div>
+    <div class="team-grid reveal d1">
+      <div class="team-card" *ngFor="let t of team">
+        <span class="team-icon">{{ t.icon }}</span>
+        <h3>{{ t.name }}</h3>
+        <p>{{ t.role }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Ready to Work <em>With Us?</em></h2>
+        <p>Let's discuss your project, partnership, or technology needs.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-white" routerLink="/contact">Get in Touch</a>
+        <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.3)" routerLink="/divisions">Explore Divisions</a>
+      </div>
+    </div>
+  </div>
+</section>

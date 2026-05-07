@@ -1,0 +1,173 @@
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <img
+      src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&auto=format&fit=crop&q=80"
+      alt="Solar panels and technology" loading="eager"
+    />
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-left">
+      <div class="label-tag">🌍 Africa's Technology & Engineering Leader</div>
+      <h1 class="hero-title">
+        Power Your World With<br>
+        <em>Energy, Technology</em><br>
+        &amp; Innovation.
+      </h1>
+      <p class="hero-sub">
+        We design and deliver integrated solutions in solar energy, ICT infrastructure,
+        smart security, and cutting-edge research — all under one roof.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" routerLink="/divisions">Explore Our Divisions →</a>
+        <a class="btn btn-outline" routerLink="/contact">Book Consultation</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge"><span>☀️</span><div><strong>Solar Energy</strong><small>Clean &amp; Reliable</small></div></div>
+        <div class="badge"><span>💻</span><div><strong>ICT Services</strong><small>Modern Infrastructure</small></div></div>
+        <div class="badge"><span>🛡️</span><div><strong>Security Systems</strong><small>Smart Protection</small></div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card main-card">
+        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&auto=format&fit=crop&q=80" alt="Solar Installation">
+        <div class="card-label">Solar Installation</div>
+      </div>
+      <div class="hero-card sub-card">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&auto=format&fit=crop&q=80" alt="Smart Systems">
+        <div class="card-label">Smart Systems</div>
+      </div>
+      <div class="stat-pill clients"><strong>500+</strong><span>Projects Done</span></div>
+      <div class="stat-pill rating"><strong>4.9★</strong><span>Satisfaction</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span *ngFor="let item of tickerItems" class="ticker-item">
+      <span class="dot">◆</span> {{ item }}
+    </span>
+    <span *ngFor="let item of tickerItems" class="ticker-item">
+      <span class="dot">◆</span> {{ item }}
+    </span>
+  </div>
+</div>
+
+<!-- ===== DIVISIONS PREVIEW ===== -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="label-tag">What We Do</span>
+        <h2 class="section-title">Our Four Core <em>Divisions</em></h2>
+        <p class="section-sub">Comprehensive technology and engineering across four specialist areas.</p>
+      </div>
+      <a class="btn btn-outline" routerLink="/divisions">View All Divisions →</a>
+    </div>
+
+    <div class="divisions-preview">
+      <a class="div-card" *ngFor="let d of divisions" [routerLink]="'/divisions'">
+        <div class="div-card-top" [style.background]="d.color">
+          <span class="div-num">{{ d.number }}</span>
+          <span class="div-icon-big">{{ d.icon }}</span>
+        </div>
+        <div class="div-card-body">
+          <h3>{{ d.title }}</h3>
+          <p class="div-tagline">{{ d.tagline }}</p>
+          <p class="div-desc">{{ d.description }}</p>
+          <span class="div-cta">Explore Services →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="section-bg">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <span class="label-tag blue">Why Choose Us</span>
+        <h2 class="section-title">Engineering Excellence,<br><em>Every Time.</em></h2>
+        <p class="section-sub">
+          We combine deep technical expertise across multiple disciplines to deliver
+          reliable, high-quality outcomes for every client and every project size.
+        </p>
+        <a class="btn btn-dark" routerLink="/about">Learn About Us →</a>
+      </div>
+      <div class="why-cards">
+        <div class="why-card" *ngFor="let w of whyUs">
+          <span class="why-icon">{{ w.icon }}</span>
+          <div>
+            <strong>{{ w.title }}</strong>
+            <p>{{ w.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK STATS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-band">
+      <div class="stat-block">
+        <strong>150+</strong><span>Projects Completed</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <strong>600+</strong><span>Clients Served</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <strong>4</strong><span>Core Divisions</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-block">
+        <strong>100%</strong><span>Quality Assured</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INNOVATION CTA ===== -->
+<section class="lab-cta-section">
+  <div class="container">
+    <div class="lab-cta-inner">
+      <div class="lab-cta-img">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&auto=format&fit=crop&q=80" alt="Innovation Lab" />
+      </div>
+      <div class="lab-cta-text">
+        <span class="label-tag green">Innovation Lab</span>
+        <h2 class="section-title">Building Tomorrow's<br><em>Technology Today</em></h2>
+        <p class="section-sub">Our R&D division is actively developing new inventions, smart energy systems, and proprietary technology — open to strategic collaborations and investment.</p>
+        <div class="lab-cta-actions">
+          <a class="btn btn-accent" routerLink="/innovation-lab">Visit the Lab →</a>
+          <a class="btn btn-outline" routerLink="/investors">Invest in Innovation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVESTOR TEASER ===== -->
+<section class="investor-teaser">
+  <div class="container">
+    <div class="investor-banner">
+      <div class="ib-text">
+        <h2>Ready To <em>Partner</em> in Building the Future of Technology?</h2>
+        <p>Multiple investment and strategic partnership opportunities available across our innovation and engineering divisions.</p>
+      </div>
+      <div class="ib-actions">
+        <a class="btn btn-white" routerLink="/investors">Become a Partner</a>
+        <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.35)" routerLink="/contact">Contact Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>

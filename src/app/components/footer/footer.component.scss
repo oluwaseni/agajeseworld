@@ -1,0 +1,115 @@
+footer {
+  background: var(--text);
+  padding: 70px 0 0;
+  color: rgba(255,255,255,0.65);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 580px) { grid-template-columns: 1fr; }
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0.75rem 0 1.25rem;
+  max-width: 220px;
+  font-weight: 300;
+}
+
+.footer-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  margin-bottom: 0.1rem;
+
+  strong { font-weight: 800; color: var(--accent); }
+
+  .fmark {
+    width: 34px; height: 34px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+
+    &:hover { color: var(--accent); border-color: var(--accent); }
+  }
+}
+
+.footer-col {
+  h4 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #fff;
+    margin-bottom: 1.2rem;
+  }
+
+  ul { list-style: none; }
+
+  li { margin-bottom: 0.6rem; }
+
+  a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+
+    &:hover { color: var(--accent); }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

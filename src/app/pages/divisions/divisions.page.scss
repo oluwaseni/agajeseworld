@@ -1,0 +1,81 @@
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.15; color: var(--text); margin-bottom: 1rem; em { font-style: italic; color: var(--accent); } }
+.section-sub { color: var(--text-muted); font-size: 1rem; font-weight: 300; line-height: 1.8; }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+.divisions-page { padding: 80px 0; background: var(--bg); }
+
+.div-full-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.div-full-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color .3s, box-shadow .3s;
+
+  &:hover { border-color: rgba(232,130,12,.25); box-shadow: var(--shadow-md); }
+  &.active { border-color: var(--accent); box-shadow: 0 12px 40px rgba(232,130,12,.12); }
+}
+
+.dfc-header {
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  cursor: pointer;
+  transition: filter .2s;
+  &:hover { filter: brightness(.97); }
+}
+
+.dfc-header-left {
+  display: flex; align-items: center; gap: 1.5rem;
+  .dfc-number { font-family: var(--font-mono); font-size: .72rem; font-weight: 700; color: var(--text-light); letter-spacing: .1em; }
+}
+
+.dfc-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: .25rem; }
+.dfc-tagline { font-family: var(--font-mono); font-size: .72rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+
+.dfc-header-right { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+.dfc-icon { font-size: 2.5rem; }
+.expand-btn {
+  background: var(--white); border: 1.5px solid var(--border); border-radius: 50px;
+  padding: .45rem 1.1rem; font-family: var(--font-body); font-size: .8rem; font-weight: 600;
+  cursor: pointer; color: var(--text-muted); transition: all .2s; white-space: nowrap;
+  &.open { border-color: var(--accent); color: var(--accent); }
+  &:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+.dfc-preview { padding: 1.5rem 2.5rem; border-top: 1px solid var(--border); }
+.dfc-desc { font-size: .9rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; margin-bottom: 1rem; }
+.dfc-pills { display: flex; flex-wrap: wrap; gap: .5rem;
+  .pill { font-size: .72rem; padding: .3rem .75rem; border-radius: 50px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); }
+  .more { color: var(--accent); border-color: rgba(232,130,12,.2); background: var(--accent-light); }
+}
+
+.dfc-detail { border-top: 1.5px solid var(--accent); animation: expand .35s ease; }
+.dfc-detail-inner { padding: 2rem 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; }
+
+.sh { font-size: .72rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 1rem; }
+.slist { list-style: none; display: flex; flex-direction: column; gap: .65rem;
+  li { font-size: .9rem; color: var(--text); padding-left: 1.2rem; position: relative; line-height: 1.5;
+    &::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: .78rem; }
+  }
+}
+
+.dfc-cta { padding: 1.5rem 2.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 1.5rem; background: var(--bg); }
+.cta-hint { font-size: .78rem; color: var(--text-muted); }
+
+@keyframes expand { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* BOTTOM CTA */
+.divisions-cta { padding: 80px 0; background: var(--white); }
+.cta-row { background: var(--accent-light); border: 1.5px solid rgba(232,130,12,.2); border-radius: 20px; padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+
+@media(max-width:768px) {
+  .dfc-header { flex-direction: column; align-items: flex-start; }
+  .dfc-header-right { width: 100%; justify-content: space-between; }
+  .dfc-detail-inner { grid-template-columns: 1fr; }
+}

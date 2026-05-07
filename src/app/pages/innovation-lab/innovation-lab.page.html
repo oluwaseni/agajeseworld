@@ -1,0 +1,78 @@
+<app-page-hero
+  tag="Innovation Lab"
+  tagClass="green"
+  title="Building Tomorrow's <em>Technology Today</em>"
+  subtitle="Our Research, Innovation & Inventions division transforms bold ideas into practical, scalable technologies — driving Africa's next wave of technological progress."
+  imgUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&auto=format&fit=crop&q=80"
+  [breadcrumbs]="[{ label: 'Innovation Lab' }]"
+></app-page-hero>
+
+<!-- WHAT WE DO -->
+<section class="focus-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-tag green">Our Focus</span>
+      <h2 class="section-title">How the <em>Lab Works</em></h2>
+      <p class="section-sub">From idea to invention — our structured process takes technology concepts through research, prototyping, and commercialization.</p>
+    </div>
+    <div class="focus-grid reveal d1">
+      <div class="focus-card" *ngFor="let f of focus">
+        <span class="focus-icon">{{ f.icon }}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH PROJECTS -->
+<section class="research-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-tag purple">Active Research</span>
+      <h2 class="section-title">Current <em>Research Projects</em></h2>
+      <p class="section-sub">Four active initiatives across energy, security, and automation technology domains.</p>
+    </div>
+    <div class="research-grid">
+      <div class="research-card reveal" *ngFor="let r of research; let i = index" [style.transition-delay]="(i*0.1)+'s'">
+        <div class="rc-header">
+          <span class="rc-badge">{{ r.badge }}</span>
+          <span class="rc-status" [class]="'status-'+r.status.toLowerCase()">{{ r.status }}</span>
+        </div>
+        <span class="rc-icon">{{ r.icon }}</span>
+        <h3 class="rc-title">{{ r.title }}</h3>
+        <p class="rc-desc">{{ r.desc }}</p>
+        <div class="rc-tags">
+          <span class="tag" *ngFor="let t of r.tags">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABORATE -->
+<section class="collab-section">
+  <div class="container">
+    <div class="collab-grid reveal">
+      <div class="collab-text">
+        <span class="label-tag green">Open Collaboration</span>
+        <h2 class="section-title">Partner With Our <em>Research Team</em></h2>
+        <p>We actively seek partnerships with engineers, academic institutions, and research organizations to co-develop breakthrough technologies. Whether you're an investor, a researcher, or a technology company — there's a collaboration model for you.</p>
+        <ul class="collab-list">
+          <li>Joint research and development agreements</li>
+          <li>Academic and institutional collaborations</li>
+          <li>Technology licensing and IP partnerships</li>
+          <li>Prototype co-development and manufacturing</li>
+          <li>Investment in early-stage technology products</li>
+        </ul>
+        <div class="collab-actions">
+          <a class="btn btn-accent" routerLink="/investors">Explore Partnerships →</a>
+          <a class="btn btn-outline" routerLink="/contact">Contact the Lab Team</a>
+        </div>
+      </div>
+      <div class="collab-img">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&auto=format&fit=crop&q=80" alt="Research collaboration" />
+      </div>
+    </div>
+  </div>
+</section>

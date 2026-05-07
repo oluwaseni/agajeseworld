@@ -1,0 +1,66 @@
+<section id="divisions" class="divisions-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="label-tag">What We Do</span>
+      <h2 class="section-title">Our Four Core <em>Divisions</em></h2>
+      <p class="section-sub" style="margin: 0 auto;">Click any division to explore full services and capabilities.</p>
+    </div>
+
+    <div class="divisions-grid">
+      <div
+        class="division-card reveal"
+        *ngFor="let div of divisions; let i = index"
+        [class.active]="activeId === div.id"
+        (click)="toggle(div.id)"
+        [style.--delay]="(i * 0.1) + 's'"
+      >
+        <div class="card-top" [style.background]="div.color">
+          <span class="div-number">{{ div.number }}</span>
+          <span class="div-icon">{{ div.icon }}</span>
+          <div class="card-arrow" [class.rotated]="activeId === div.id">↓</div>
+        </div>
+        <div class="card-body">
+          <h3 class="div-title">{{ div.title }}</h3>
+          <p class="div-tagline">{{ div.tagline }}</p>
+          <p class="div-desc">{{ div.description }}</p>
+          <div class="service-pills">
+            <span class="pill" *ngFor="let s of div.services.slice(0,3)">{{ s.split(' ').slice(0,3).join(' ') }}</span>
+            <span class="pill more">+{{ div.services.length - 3 }} more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPANDED DETAIL -->
+    <div *ngIf="activeDivision" class="detail-panel reveal visible" [id]="'detail-' + activeDivision.id">
+      <div class="detail-inner">
+        <button class="detail-close" (click)="toggle(activeDivision.id)">✕ Close</button>
+        <div class="detail-grid">
+          <div class="detail-info">
+            <span class="label-tag">Division {{ activeDivision.number }}</span>
+            <h2 class="detail-title">{{ activeDivision.title }}</h2>
+            <p class="detail-desc">{{ activeDivision.description }}</p>
+          </div>
+          <div class="detail-services">
+            <div class="services-col">
+              <h4 class="services-heading">Core Services</h4>
+              <ul class="services-list">
+                <li *ngFor="let s of activeDivision.services">{{ s }}</li>
+              </ul>
+            </div>
+            <div class="services-col" *ngIf="activeDivision.electricalServices">
+              <h4 class="services-heading">Electrical Engineering</h4>
+              <ul class="services-list">
+                <li *ngFor="let s of activeDivision.electricalServices">{{ s }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="detail-cta">
+          <a href="#contact" class="btn btn-accent" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'});return false;">Request a Quote →</a>
+          <span class="detail-hint">Our team will respond within 24 hours</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

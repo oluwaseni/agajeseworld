@@ -1,0 +1,87 @@
+<app-page-hero
+  tag="Strategic Partnerships"
+  tagClass="blue"
+  title="Partner in Building the <em>Future of Technology</em>"
+  subtitle="Our innovation division actively seeks strategic partners, investors, and collaborators to support the development and commercialization of new technologies across Africa."
+  imgUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&auto=format&fit=crop&q=80"
+  [breadcrumbs]="[{ label: 'Investors & Partners' }]"
+></app-page-hero>
+
+<!-- WHY INVEST -->
+<section class="invest-why">
+  <div class="container">
+    <div class="invest-why-grid reveal">
+      <div class="iw-text">
+        <span class="label-tag blue">Why Partner With Us</span>
+        <h2 class="section-title">Investing in Africa's <em>Technology Future</em></h2>
+        <p>AGAJESEWORLD sits at the intersection of Africa's fastest-growing technology needs — renewable energy, digital infrastructure, smart security, and proprietary innovation. Our diversified division model reduces risk while maximising impact across multiple sectors.</p>
+        <ul class="invest-points">
+          <li><strong>Diversified portfolio</strong> — four divisions, one company</li>
+          <li><strong>Proven delivery</strong> — 150+ completed projects</li>
+          <li><strong>Africa-first</strong> — solutions built for local realities</li>
+          <li><strong>IP ownership</strong> — proprietary inventions in development</li>
+          <li><strong>Scalable model</strong> — ready for regional expansion</li>
+        </ul>
+      </div>
+      <div class="iw-stats">
+        <div class="iw-stat"><strong>150+</strong><span>Projects Delivered</span></div>
+        <div class="iw-stat"><strong>4</strong><span>Investment Verticals</span></div>
+        <div class="iw-stat"><strong>600+</strong><span>Clients Served</span></div>
+        <div class="iw-stat"><strong>∞</strong><span>Innovation Potential</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="opp-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="label-tag">Investment Areas</span>
+      <h2 class="section-title">Investment <em>Opportunities</em></h2>
+      <p class="section-sub" style="margin:0 auto">Multiple pathways to collaborate and grow with AGAJESEWORLD.</p>
+    </div>
+    <div class="opp-grid reveal d1">
+      <div class="opp-card" *ngFor="let o of opportunities">
+        <span class="opp-icon">{{ o.icon }}</span>
+        <h3>{{ o.title }}</h3>
+        <p>{{ o.description }}</p>
+        <a class="btn btn-outline opp-btn" routerLink="/contact">Enquire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP MODELS -->
+<section class="models-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-tag blue">How We Work Together</span>
+      <h2 class="section-title">Partnership <em>Models</em></h2>
+      <p class="section-sub">Choose the collaboration structure that best fits your goals and capacity.</p>
+    </div>
+    <div class="models-grid reveal d1">
+      <div class="model-card" *ngFor="let m of models">
+        <span class="model-icon">{{ m.icon }}</span>
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="invest-cta">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Ready to <em>Start the Conversation?</em></h2>
+        <p>Reach out to our innovation team to discuss how we can work together to build Africa's technology future.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-white" routerLink="/contact">Contact Our Team</a>
+        <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3)" routerLink="/innovation-lab">Visit the Lab</a>
+      </div>
+    </div>
+  </div>
+</section>

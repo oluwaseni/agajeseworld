@@ -1,0 +1,47 @@
+<section id="lab" class="lab-section">
+  <div class="lab-hero">
+    <div class="container">
+      <div class="lab-hero-inner reveal">
+        <div class="lab-hero-text">
+          <span class="label-tag green">Innovation Lab</span>
+          <h2 class="section-title">Building Tomorrow's<br><em>Technology Today</em></h2>
+          <p class="section-sub">
+            Our R&D division drives research, invention and product development across key technology domains —
+            transforming innovative ideas into practical, scalable technologies.
+          </p>
+        </div>
+        <div class="lab-hero-img">
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&auto=format&fit=crop&q=80"
+            alt="Innovation and research"
+          />
+          <div class="lab-overlay-badge">
+            <span>🔬</span>
+            <div><strong>Active Research</strong><small>4 Projects</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="lab-cards reveal">
+      <div class="lab-card" *ngFor="let c of cards; let i = index" [style.--delay]="(i*0.1)+'s'">
+        <div class="lab-card-top">
+          <span class="lab-badge">{{ c.badge }}</span>
+          <span class="lab-icon">{{ c.icon }}</span>
+        </div>
+        <h3 class="lab-title">{{ c.title }}</h3>
+        <p class="lab-desc">{{ c.desc }}</p>
+      </div>
+    </div>
+
+    <div class="lab-collab reveal">
+      <div class="collab-text">
+        <h3>Open to Collaboration</h3>
+        <p>We actively seek partnerships with engineers, academic institutions, and research organizations to co-develop breakthrough technologies for Africa and beyond.</p>
+      </div>
+      <a href="#investors" class="btn btn-dark" onclick="document.querySelector('#investors').scrollIntoView({behavior:'smooth'});return false;">Explore Partnerships →</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+<app-page-hero
+  tag="Our Work"
+  title="Featured <em>Projects</em>"
+  subtitle="A showcase of completed work across our energy, ICT, security and innovation divisions — delivering real results for real clients."
+  imgUrl="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1600&auto=format&fit=crop&q=80"
+  [breadcrumbs]="[{ label: 'Projects' }]"
+></app-page-hero>
+
+<section class="projects-section">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="filters reveal">
+      <button
+        *ngFor="let f of filters"
+        class="filter-btn"
+        [class.active]="activeFilter === f"
+        (click)="activeFilter = f"
+      >{{ f }}</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="projects-grid">
+      <div
+        class="project-card reveal"
+        *ngFor="let p of filtered; let i = index"
+        [style.transition-delay]="(i * 0.08) + 's'"
+      >
+        <div class="project-thumb" [style.background]="p.color">
+          <span class="thumb-icon">{{ p.icon }}</span>
+        </div>
+        <div class="project-info">
+          <span class="project-cat">{{ p.category }}</span>
+          <h3 class="project-title">{{ p.title }}</h3>
+          <p class="project-desc">{{ p.description }}</p>
+          <a class="project-link" routerLink="/contact">Enquire About This Project <span>→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" *ngIf="filtered.length === 0">
+      <span>🔍</span>
+      <p>No projects in this category yet. <a routerLink="/contact">Request a project enquiry →</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="projects-cta">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's discuss your requirements and put together the right solution for your needs.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-white" routerLink="/contact">Request a Quote</a>
+        <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3)" routerLink="/divisions">View Divisions</a>
+      </div>
+    </div>
+  </div>
+</section>

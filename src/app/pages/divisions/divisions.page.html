@@ -1,0 +1,82 @@
+<app-page-hero
+  tag="What We Do"
+  title="Our Four Core <em>Divisions</em>"
+  subtitle="Comprehensive technology and engineering solutions across energy, ICT, security, and research — all under one company."
+  imgUrl="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&auto=format&fit=crop&q=80"
+  [breadcrumbs]="[{ label: 'Divisions' }]"
+></app-page-hero>
+
+<section class="divisions-page">
+  <div class="container">
+
+    <!-- FULL DIVISION CARDS -->
+    <div class="div-full-grid">
+      <div
+        class="div-full-card reveal"
+        *ngFor="let d of divisions; let i = index"
+        [id]="d.id"
+        [class.active]="activeId === d.id"
+      >
+        <div class="dfc-header" [style.background]="d.color" (click)="toggle(d.id)">
+          <div class="dfc-header-left">
+            <span class="dfc-number">{{ d.number }}</span>
+            <div>
+              <h2 class="dfc-title">{{ d.title }}</h2>
+              <p class="dfc-tagline">{{ d.tagline }}</p>
+            </div>
+          </div>
+          <div class="dfc-header-right">
+            <span class="dfc-icon">{{ d.icon }}</span>
+            <button class="expand-btn" [class.open]="activeId === d.id">
+              {{ activeId === d.id ? '− Collapse' : '+ Expand' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="dfc-preview">
+          <p class="dfc-desc">{{ d.description }}</p>
+          <div class="dfc-pills">
+            <span class="pill" *ngFor="let s of d.services.slice(0,4)">{{ s.split(' ').slice(0,3).join(' ') }}</span>
+            <span class="pill more">+{{ d.services.length - 4 }} more</span>
+          </div>
+        </div>
+
+        <!-- Expanded content -->
+        <div class="dfc-detail" *ngIf="activeId === d.id" [id]="'detail-' + d.id">
+          <div class="dfc-detail-inner">
+            <div class="detail-col">
+              <h4 class="sh">Core Services</h4>
+              <ul class="slist">
+                <li *ngFor="let s of d.services">{{ s }}</li>
+              </ul>
+            </div>
+            <div class="detail-col" *ngIf="d.electricalServices">
+              <h4 class="sh">Electrical Engineering</h4>
+              <ul class="slist">
+                <li *ngFor="let s of d.electricalServices">{{ s }}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dfc-cta">
+            <a class="btn btn-accent" routerLink="/contact">Request a Quote →</a>
+            <span class="cta-hint">Our team responds within 24 hours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE CTA -->
+<section class="divisions-cta">
+  <div class="container">
+    <div class="cta-row">
+      <div>
+        <h2 class="section-title">Need a <em>Custom Solution</em> Across Multiple Divisions?</h2>
+        <p class="section-sub" style="margin-bottom:0">Our integrated approach means we can coordinate across Solar, ICT, Security, and Innovation for a truly comprehensive outcome.</p>
+      </div>
+      <a class="btn btn-accent" routerLink="/contact">Talk to Our Team →</a>
+    </div>
+  </div>
+</section>

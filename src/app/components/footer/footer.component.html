@@ -1,0 +1,32 @@
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo-wrap" routerLink="/">
+          <div class="fmark">AW</div>
+          AGAJESE<strong>WORLD</strong>
+        </a>
+        <p>Powering progress through energy, technology, and innovation across Africa.</p>
+        <div class="social-links">
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-col" *ngFor="let col of cols">
+        <h4>{{ col.heading }}</h4>
+        <ul>
+          <li *ngFor="let link of col.links">
+            <a [routerLink]="link.path">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {{ year }} AGAJESEWORLD. All rights reserved.</span>
+      <span>Built with Innovation &amp; Excellence</span>
+    </div>
+  </div>
+</footer>

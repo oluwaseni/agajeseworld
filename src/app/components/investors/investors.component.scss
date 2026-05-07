@@ -1,0 +1,80 @@
+.investors-section { background: var(--bg); }
+
+.investors-banner {
+  background: var(--accent);
+  padding: 80px 0;
+}
+
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @media (max-width: 768px) { flex-direction: column; }
+}
+
+.banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0.75rem 0 1rem;
+  em { font-style: italic; color: rgba(255,255,255,0.75); }
+}
+
+.banner-sub {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  max-width: 480px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.opp-container { padding: 80px 5%; }
+
+.opp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 580px) { grid-template-columns: 1fr; }
+}
+
+.opp-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: all 0.3s;
+  animation-delay: var(--delay, 0s);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  &:hover {
+    border-color: rgba(232,130,12,0.3);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+
+  .opp-icon { font-size: 2rem; }
+  h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+  p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; flex: 1; }
+}
+
+.opp-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,75 @@
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="hero-image-overlay"></div>
+    <img
+      src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&auto=format&fit=crop&q=80"
+      alt="Solar panels and technology"
+      class="hero-img"
+    />
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-left">
+      <div class="label-tag">🌍 Africa's Technology & Engineering Leader</div>
+      <h1 class="hero-title">
+        Power Your World With<br>
+        <em>Energy, Technology</em><br>
+        & Innovation.
+      </h1>
+      <p class="hero-sub">
+        We design and deliver integrated solutions in solar energy, ICT infrastructure,
+        smart security, and cutting-edge research — all under one roof.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-accent" (click)="scroll('#divisions')">Explore Our Divisions →</button>
+        <button class="btn btn-outline" (click)="scroll('#contact')">Book Consultation</button>
+      </div>
+      <div class="hero-badges">
+        <div class="badge">
+          <span class="badge-icon">☀️</span>
+          <div><strong>Solar Energy</strong><small>Clean & Reliable</small></div>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">💻</span>
+          <div><strong>ICT Services</strong><small>Modern Infrastructure</small></div>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">🛡️</span>
+          <div><strong>Security Systems</strong><small>Smart Protection</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card main-card">
+        <img
+          src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&auto=format&fit=crop&q=80"
+          alt="Solar installation"
+          class="card-img"
+        />
+        <div class="card-label">Solar Installation</div>
+      </div>
+      <div class="hero-card sub-card">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&auto=format&fit=crop&q=80"
+          alt="Smart technology"
+          class="card-img"
+        />
+        <div class="card-label">Smart Systems</div>
+      </div>
+      <div class="stat-pill clients"><strong>500+</strong><span>Projects Done</span></div>
+      <div class="stat-pill rating"><strong>4.9★</strong><span>Client Satisfaction</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span *ngFor="let item of tickerItems" class="ticker-item">
+      <span class="dot">◆</span> {{ item }}
+    </span>
+    <span *ngFor="let item of tickerItems" class="ticker-item">
+      <span class="dot">◆</span> {{ item }}
+    </span>
+  </div>
+</div>

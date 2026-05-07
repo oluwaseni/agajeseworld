@@ -1,0 +1,37 @@
+<section id="investors" class="investors-section">
+  <div class="investors-banner">
+    <div class="container">
+      <div class="banner-inner reveal">
+        <div>
+          <span class="label-tag" style="color:#fff;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);">Strategic Partnerships</span>
+          <h2 class="banner-title">
+            Ready To Partner in<br>Building the <em>Future of Technology?</em>
+          </h2>
+          <p class="banner-sub">
+            Our innovation division actively seeks strategic partners, investors, and collaborators to support
+            the development and commercialization of new technologies.
+          </p>
+        </div>
+        <div class="banner-actions">
+          <button class="btn btn-white" (click)="scroll('#contact')">Become a Partner</button>
+          <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.35);" (click)="scroll('#contact')">Invest in Innovation</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container opp-container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Investment <em>Opportunities</em></h2>
+      <p class="section-sub">Multiple pathways to collaborate and grow with AGAJESEWORLD.</p>
+    </div>
+    <div class="opp-grid">
+      <div class="opp-card reveal" *ngFor="let o of opportunities; let i = index" [style.--delay]="(i*0.1)+'s'">
+        <span class="opp-icon">{{ o.icon }}</span>
+        <h3>{{ o.title }}</h3>
+        <p>{{ o.description }}</p>
+        <button class="btn btn-outline opp-btn" (click)="scroll('#contact')">Learn More →</button>
+      </div>
+    </div>
+  </div>
+</section>

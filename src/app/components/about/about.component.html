@@ -1,0 +1,74 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <!-- LEFT: Images -->
+      <div class="about-visuals reveal">
+        <div class="img-stack">
+          <img
+            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&auto=format&fit=crop&q=80"
+            alt="Engineers at work"
+            class="img-main"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&auto=format&fit=crop&q=80"
+            alt="Technology solutions"
+            class="img-secondary"
+          />
+          <div class="experience-badge">
+            <strong>Leading</strong>
+            <span>African Tech & Engineering Company</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Text -->
+      <div class="about-text">
+        <div class="reveal">
+          <span class="label-tag">About AGAJESEWORLD</span>
+          <h2 class="section-title">
+            We Help Organizations<br>Take Control of Their<br>
+            <em>Technology Future.</em>
+          </h2>
+          <p class="section-sub">
+            AGAJESEWORLD is a multidisciplinary technology and engineering company delivering integrated
+            solutions in energy, electrical systems, information technology, security infrastructure, and
+            research-driven innovation.
+          </p>
+          <p class="about-body">
+            Our four core divisions work in synergy — giving clients a single trusted partner for all their
+            technology needs. From solar power to smart security and custom software, we power progress at every level.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="values-grid reveal reveal-delay-1">
+          <div class="value-card" *ngFor="let v of values">
+            <span class="value-icon">{{ v.icon }}</span>
+            <div>
+              <strong>{{ v.name }}</strong>
+              <p>{{ v.desc }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="stats-row reveal reveal-delay-2">
+          <div class="stat">
+            <strong>150+</strong>
+            <span>Projects Completed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>600+</strong>
+            <span>Clients Served</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>4</strong>
+            <span>Core Divisions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

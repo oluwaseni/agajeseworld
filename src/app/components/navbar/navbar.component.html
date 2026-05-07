@@ -1,0 +1,27 @@
+<nav [class.scrolled]="scrolled">
+  <div class="nav-inner">
+    <a class="logo" routerLink="/">
+      <span class="logo-mark">AW</span>
+      <span class="logo-text">AGAJESE<strong>WORLD</strong></span>
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li *ngFor="let link of navLinks">
+        <a
+          [routerLink]="link.path"
+          [class.active]="isActive(link.path)"
+          (click)="closeMenu()"
+        >{{ link.label }}</a>
+      </li>
+      <li>
+        <a class="btn btn-accent" routerLink="/contact" (click)="closeMenu()">
+          Get a Quote
+        </a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="menuOpen = !menuOpen" [class.open]="menuOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
