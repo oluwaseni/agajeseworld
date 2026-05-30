@@ -1,6 +1,7 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,19 +15,36 @@ export class NavbarComponent {
 
   scrolled = false;
   menuOpen = false;
+  divDropOpen = false;
+  divMobileOpen = false;
 
   navLinks = [
     { label: 'Home',           path: '/' },
     { label: 'About',          path: '/about' },
-    { label: 'Divisions',      path: '/divisions' },
     { label: 'Projects',       path: '/projects' },
     { label: 'Innovation Lab', path: '/innovation-lab' },
     { label: 'Investors',      path: '/investors' },
   ];
 
+  get divisionLinks() {
+    return this.data.divisions.map(d => ({
+      label: d.title,
+      tagline: d.tagline,
+      icon: d.icon,
+      path: `/divisions/${d.id}`
+    }));
+  }
+
+  constructor(private data: DataService, private el: ElementRef) {}
+
   @HostListener('window:scroll')
-  onScroll() {
-    this.scrolled = window.scrollY > 40;
+  onScroll() { this.scrolled = window.scrollY > 40; }
+
+  @HostListener('document:click', ['$event'])
+  onDocClick(e: Event) {
+    if (!this.el.nativeElement.contains(e.target)) {
+      this.divDropOpen = false;
+    }
   }
 
   isActive(path: string): boolean {
@@ -34,5 +52,14 @@ export class NavbarComponent {
     return this.activePage.startsWith(path);
   }
 
-  closeMenu() { this.menuOpen = false; }
+  toggleDivDrop(e: Event) {
+    e.stopPropagation();
+    this.divDropOpen = !this.divDropOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+    this.divDropOpen = false;
+    this.divMobileOpen = false;
+  }
 }

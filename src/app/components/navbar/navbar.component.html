@@ -1,27 +1,54 @@
 <nav [class.scrolled]="scrolled">
   <div class="nav-inner">
+
     <a class="logo" routerLink="/">
-      <span class="logo-mark">AW</span>
-      <span class="logo-text">AGAJESE<strong>WORLD</strong></span>
+      <img src="assets/logo.png" alt="AgajeseWorld" class="logo-img" />
     </a>
 
     <ul class="nav-links" [class.open]="menuOpen">
-      <li *ngFor="let link of navLinks">
-        <a
-          [routerLink]="link.path"
-          [class.active]="isActive(link.path)"
-          (click)="closeMenu()"
-        >{{ link.label }}</a>
-      </li>
-      <li>
-        <a class="btn btn-accent" routerLink="/contact" (click)="closeMenu()">
-          Get a Quote
+
+      <!-- Home & About -->
+      <li *ngFor="let link of navLinks.slice(0, 2)">
+        <a [routerLink]="link.path" [class.active]="isActive(link.path)" (click)="closeMenu()">
+          {{ link.label }}
         </a>
       </li>
+
+      <!-- Divisions dropdown -->
+      <li class="has-dropdown" [class.drop-open]="divDropOpen">
+        <button class="drop-trigger" [class.active]="isActive('/divisions')" (click)="toggleDivDrop($event)">
+          Divisions <span class="caret">▾</span>
+        </button>
+
+        <div class="dropdown-panel" (click)="$event.stopPropagation()">
+          <div class="drop-grid">
+            <a class="drop-item" *ngFor="let d of divisionLinks" [routerLink]="d.path" (click)="closeMenu()">
+              <i class="bi {{ d.icon }}"></i>
+              <span>{{ d.label }}</span>
+            </a>
+          </div>
+          <div class="drop-footer">
+            <a routerLink="/divisions" (click)="closeMenu()">All Divisions →</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Remaining links -->
+      <li *ngFor="let link of navLinks.slice(2)">
+        <a [routerLink]="link.path" [class.active]="isActive(link.path)" (click)="closeMenu()">
+          {{ link.label }}
+        </a>
+      </li>
+
+      <li>
+        <a class="btn btn-accent" routerLink="/contact" (click)="closeMenu()">Get a Quote</a>
+      </li>
+
     </ul>
 
     <button class="hamburger" (click)="menuOpen = !menuOpen" [class.open]="menuOpen">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </nav>

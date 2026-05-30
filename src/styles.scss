@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg: #f7f5f0;
+  --bg: #f5f7f2;
   --white: #ffffff;
-  --surface: #fdfcf9;
-  --surface2: #f0ede6;
-  --border: #e5e0d5;
+  --surface: #fafcf8;
+  --surface2: #ecf0e6;
+  --border: #dde5d4;
   --text: #1a1a1a;
-  --text-muted: #6b6459;
-  --text-light: #9a9086;
-  --accent: #e8820c;
-  --accent-dark: #c96800;
-  --accent-light: #fef3e2;
-  --accent2: #1a3a5c;
-  --accent2-light: #e8f0f8;
-  --green: #2d7a4f;
-  --green-light: #e8f5ee;
+  --text-muted: #5a6652;
+  --text-light: #8a9880;
+  --accent: #8CC63F;
+  --accent-dark: #6fa030;
+  --accent-light: #eef6e0;
+  --accent2: #3D3F47;
+  --accent2-light: #ededef;
+  --green: #8CC63F;
+  --green-light: #eef6e0;
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-md: 0 8px 30px rgba(0,0,0,0.10);
   --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
@@ -62,7 +62,7 @@ a { text-decoration: none; color: inherit; }
 .btn-accent {
   background: var(--accent);
   color: #fff;
-  &:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,130,12,0.35); }
+  &:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(140,198,63,0.4); }
 }
 
 .btn-outline {
@@ -75,7 +75,7 @@ a { text-decoration: none; color: inherit; }
 .btn-dark {
   background: var(--accent2);
   color: #fff;
-  &:hover { background: #0f2845; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,58,92,0.3); }
+  &:hover { background: #2a2b32; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(61,63,71,0.35); }
 }
 
 .btn-white {
@@ -97,20 +97,20 @@ a { text-decoration: none; color: inherit; }
   background: var(--accent-light);
   padding: 0.35rem 0.85rem;
   border-radius: 50px;
-  border: 1px solid rgba(232,130,12,0.2);
+  border: 1px solid rgba(140,198,63,0.25);
   margin-bottom: 1rem;
 }
 
 .label-tag.blue {
   color: var(--accent2);
   background: var(--accent2-light);
-  border-color: rgba(26,58,92,0.15);
+  border-color: rgba(61,63,71,0.15);
 }
 
 .label-tag.green {
   color: var(--green);
   background: var(--green-light);
-  border-color: rgba(45,122,79,0.2);
+  border-color: rgba(140,198,63,0.25);
 }
 
 /* SECTION LAYOUT */

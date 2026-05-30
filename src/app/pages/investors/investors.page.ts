@@ -15,10 +15,10 @@ export class InvestorsPage implements OnInit {
   opportunities = this.data.opportunities;
 
   models = [
-    { icon: '💼', title: 'Direct Investment', desc: 'Fund specific research projects or product development initiatives with defined milestones and returns.' },
-    { icon: '🔗', title: 'Strategic Partnership', desc: 'Align resources, expertise, and market access to co-develop and commercialize new technologies.' },
-    { icon: '🏭', title: 'Manufacturing Joint Venture', desc: 'Partner on scaling prototypes to full production through shared manufacturing agreements.' },
-    { icon: '🎓', title: 'Research Collaboration', desc: 'Co-author research, share labs, and jointly develop intellectual property with academic rigor.' },
+    { icon: 'bi-cash-coin', title: 'Direct Investment', desc: 'Fund specific research projects or product development initiatives with defined milestones and returns.' },
+    { icon: 'bi-diagram-2', title: 'Strategic Partnership', desc: 'Align resources, expertise, and market access to co-develop and commercialize new technologies.' },
+    { icon: 'bi-building', title: 'Manufacturing Joint Venture', desc: 'Partner on scaling prototypes to full production through shared manufacturing agreements.' },
+    { icon: 'bi-mortarboard', title: 'Research Collaboration', desc: 'Co-author research, share labs, and jointly develop intellectual property with academic rigor.' },
   ];
 
   constructor(private data: DataService, private el: ElementRef) {}

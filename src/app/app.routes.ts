@@ -17,6 +17,11 @@ export const routes: Routes = [
     title: 'Our Divisions – AGAJESEWORLD'
   },
   {
+    path: 'divisions/:id',
+    loadComponent: () => import('./pages/divisions/division-detail.page').then(m => m.DivisionDetailPage),
+    title: 'Division – AGAJESEWORLD'
+  },
+  {
     path: 'projects',
     loadComponent: () => import('./pages/projects/projects.page').then(m => m.ProjectsPage),
     title: 'Projects – AGAJESEWORLD'

@@ -10,24 +10,24 @@
 
   <div class="container hero-content">
     <div class="hero-left">
-      <div class="label-tag">🌍 Africa's Technology & Engineering Leader</div>
+      <div class="label-tag">Energy • ICT • Security • Innovation</div>
       <h1 class="hero-title">
         Power Your World With<br>
         <em>Energy, Technology</em><br>
         &amp; Innovation.
       </h1>
       <p class="hero-sub">
-        We design and deliver integrated solutions in solar energy, ICT infrastructure,
-        smart security, and cutting-edge research — all under one roof.
+        AGAJESEWORLD delivers integrated solutions across solar energy, ICT &amp; digital systems,
+        security &amp; automation, and research-driven innovation — all under one roof.
       </p>
       <div class="hero-actions">
         <a class="btn btn-accent" routerLink="/divisions">Explore Our Divisions →</a>
         <a class="btn btn-outline" routerLink="/contact">Book Consultation</a>
       </div>
       <div class="hero-badges">
-        <div class="badge"><span>☀️</span><div><strong>Solar Energy</strong><small>Clean &amp; Reliable</small></div></div>
-        <div class="badge"><span>💻</span><div><strong>ICT Services</strong><small>Modern Infrastructure</small></div></div>
-        <div class="badge"><span>🛡️</span><div><strong>Security Systems</strong><small>Smart Protection</small></div></div>
+        <div class="badge"><span><i class="bi bi-sun"></i></span><div><strong>AGAJESE Energy</strong><small>Solar &amp; Electrical</small></div></div>
+        <div class="badge"><span><i class="bi bi-hdd-network"></i></span><div><strong>AGAJESE Systems</strong><small>ICT &amp; Digital</small></div></div>
+        <div class="badge"><span><i class="bi bi-shield-check"></i></span><div><strong>AGAJESE Tek</strong><small>Security &amp; Automation</small></div></div>
       </div>
     </div>
 
@@ -65,7 +65,7 @@
       <div>
         <span class="label-tag">What We Do</span>
         <h2 class="section-title">Our Four Core <em>Divisions</em></h2>
-        <p class="section-sub">Comprehensive technology and engineering across four specialist areas.</p>
+        <p class="section-sub">Energy · ICT & Digital · Security & Automation · Research & Innovation</p>
       </div>
       <a class="btn btn-outline" routerLink="/divisions">View All Divisions →</a>
     </div>
@@ -74,7 +74,7 @@
       <a class="div-card" *ngFor="let d of divisions" [routerLink]="'/divisions'">
         <div class="div-card-top" [style.background]="d.color">
           <span class="div-num">{{ d.number }}</span>
-          <span class="div-icon-big">{{ d.icon }}</span>
+          <i class="bi {{ d.icon }} div-icon-big"></i>
         </div>
         <div class="div-card-body">
           <h3>{{ d.title }}</h3>
@@ -102,7 +102,7 @@
       </div>
       <div class="why-cards">
         <div class="why-card" *ngFor="let w of whyUs">
-          <span class="why-icon">{{ w.icon }}</span>
+          <i class="bi {{ w.icon }} why-icon"></i>
           <div>
             <strong>{{ w.title }}</strong>
             <p>{{ w.desc }}</p>

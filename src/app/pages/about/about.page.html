@@ -11,12 +11,12 @@
   <div class="container">
     <div class="mv-grid reveal">
       <div class="mv-card accent">
-        <span class="mv-icon">🎯</span>
+        <i class="bi bi-bullseye mv-icon"></i>
         <h3>Our Mission</h3>
         <p>To deliver reliable, innovative, and high-quality solutions in energy systems, electrical engineering, ICT infrastructure, and security technologies, while fostering innovation through research and invention.</p>
       </div>
       <div class="mv-card blue">
-        <span class="mv-icon">🌍</span>
+        <i class="bi bi-globe-americas mv-icon"></i>
         <h3>Our Vision</h3>
         <p>To become a leading African technology and engineering company providing sustainable energy, advanced digital infrastructure, secure environments, and innovative technologies.</p>
       </div>
@@ -37,8 +37,8 @@
       <div class="who-text reveal d1">
         <span class="label-tag">Who We Are</span>
         <h2 class="section-title">Multidisciplinary Engineering & <em>Technology Excellence</em></h2>
-        <p>AGAJESEWORLD is organized across four core divisions, enabling it to provide comprehensive solutions for residential, commercial, and industrial clients.</p>
-        <p>Our expertise covers power systems, ICT infrastructure, smart security solutions, electrical installations, and research-driven technological inventions — all delivered by a team of experienced engineers and technicians.</p>
+        <p>AGAJESEWORLD is organized across four core divisions — <strong>AGAJESE Energy</strong>, <strong>AGAJESE Systems</strong>, <strong>AGAJESE Tek</strong>, and <strong>AGAJESE Labs</strong> — enabling comprehensive solutions for residential, commercial, and industrial clients.</p>
+        <p>Our expertise spans solar energy &amp; electrical infrastructure, ICT &amp; digital systems, security &amp; automation, and research-driven technological inventions — all delivered by a team of experienced engineers and technicians.</p>
         <ul class="check-list">
           <li>Experienced engineers and technicians across all divisions</li>
           <li>Integrated multi-disciplinary expertise under one roof</li>
@@ -60,7 +60,7 @@
     </div>
     <div class="values-grid reveal d1">
       <div class="value-card" *ngFor="let v of values">
-        <div class="value-icon-wrap">{{ v.icon }}</div>
+        <div class="value-icon-wrap"><i class="bi {{ v.icon }}"></i></div>
         <h3>{{ v.name }}</h3>
         <p>{{ v.desc }}</p>
       </div>
@@ -100,7 +100,7 @@
     </div>
     <div class="team-grid reveal d1">
       <div class="team-card" *ngFor="let t of team">
-        <span class="team-icon">{{ t.icon }}</span>
+        <i class="bi {{ t.icon }} team-icon"></i>
         <h3>{{ t.name }}</h3>
         <p>{{ t.role }}</p>
       </div>

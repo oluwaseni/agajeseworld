@@ -14,16 +14,17 @@ export class HomePage {
   divisions = this.data.divisions;
 
   tickerItems = [
-    'Solar Energy Systems', 'Electrical Engineering', 'ICT Infrastructure',
-    'CCTV & Security', 'Smart Automation', 'Research & Invention',
-    'Software Development', 'Access Control', 'Borehole Pumping', 'Strategic Partnerships'
+    'AGAJESE Energy', 'Solar Energy Systems', 'Electrical Infrastructure',
+    'AGAJESE Systems', 'ICT & Digital Solutions', 'Software Development',
+    'AGAJESE Tek', 'Security & Automation', 'CCTV & Access Control',
+    'AGAJESE Labs', 'Research & Innovation', 'Strategic Partnerships'
   ];
 
   whyUs = [
-    { icon: '👷', title: 'Experienced Engineers', desc: 'Skilled professionals across all four technology disciplines.' },
-    { icon: '🔗', title: 'Integrated Expertise', desc: 'One company, four divisions — seamless cross-disciplinary delivery.' },
-    { icon: '✅', title: 'Reliable Delivery', desc: 'Dependable project execution with quality assurance at every stage.' },
-    { icon: '💰', title: 'Competitive Pricing', desc: 'High-quality outcomes at transparent, fair market pricing.' },
+    { icon: 'bi-people', title: 'Experienced Engineers', desc: 'Skilled professionals across all four technology disciplines.' },
+    { icon: 'bi-diagram-3', title: 'Integrated Expertise', desc: 'One company, four divisions — seamless cross-disciplinary delivery.' },
+    { icon: 'bi-check-circle', title: 'Reliable Delivery', desc: 'Dependable project execution with quality assurance at every stage.' },
+    { icon: 'bi-tag', title: 'Competitive Pricing', desc: 'High-quality outcomes at transparent, fair market pricing.' },
   ];
 
   constructor(private data: DataService) {}

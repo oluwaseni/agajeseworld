@@ -15,17 +15,17 @@ export class AboutPage implements OnInit {
   values = this.data.values;
 
   team = [
-    { name: 'Chief Executive Officer', role: 'Leadership & Strategy', icon: '👔' },
-    { name: 'Division Managers',       role: 'Operational Leadership', icon: '📊' },
-    { name: 'Project Engineers',       role: 'Technical Delivery', icon: '⚙️' },
-    { name: 'ICT Developers',          role: 'Digital Solutions', icon: '💻' },
-    { name: 'Installation Teams',      role: 'Field Execution', icon: '🔧' },
-    { name: 'Customer Support',        role: 'Client Relations', icon: '🤝' },
+    { name: 'Chief Executive Officer', role: 'Leadership & Strategy', icon: 'bi-person-badge' },
+    { name: 'Division Managers',       role: 'Operational Leadership', icon: 'bi-bar-chart-line' },
+    { name: 'Project Engineers',       role: 'Technical Delivery', icon: 'bi-gear' },
+    { name: 'ICT Developers',          role: 'Digital Solutions', icon: 'bi-code-slash' },
+    { name: 'Installation Teams',      role: 'Field Execution', icon: 'bi-tools' },
+    { name: 'Customer Support',        role: 'Client Relations', icon: 'bi-headset' },
   ];
 
   milestones = [
     { year: 'Vision', text: 'Founded with a mission to deliver integrated technology and engineering across Africa.' },
-    { year: 'Growth', text: '4 core divisions established — Solar, ICT, Security, and Research & Innovation.' },
+    { year: 'Growth', text: '4 core divisions established — AGAJESE Energy, AGAJESE Systems, AGAJESE Tek, and AGAJESE Labs.' },
     { year: 'Impact', text: '150+ projects completed across residential, commercial and industrial sectors.' },
     { year: 'Future', text: 'Expanding R&D capabilities and seeking strategic partners for new technology ventures.' },
   ];

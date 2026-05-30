@@ -43,7 +43,7 @@
     </div>
     <div class="opp-grid reveal d1">
       <div class="opp-card" *ngFor="let o of opportunities">
-        <span class="opp-icon">{{ o.icon }}</span>
+        <i class="bi {{ o.icon }} opp-icon"></i>
         <h3>{{ o.title }}</h3>
         <p>{{ o.description }}</p>
         <a class="btn btn-outline opp-btn" routerLink="/contact">Enquire →</a>
@@ -62,7 +62,7 @@
     </div>
     <div class="models-grid reveal d1">
       <div class="model-card" *ngFor="let m of models">
-        <span class="model-icon">{{ m.icon }}</span>
+        <i class="bi {{ m.icon }} model-icon"></i>
         <h3>{{ m.title }}</h3>
         <p>{{ m.desc }}</p>
       </div>

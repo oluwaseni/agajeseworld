@@ -1,0 +1,78 @@
+<ng-container *ngIf="division">
+
+  <app-page-hero
+    [tag]="division.tagline"
+    [title]="division.title"
+    [subtitle]="division.description"
+    [imgUrl]="heroImg"
+    [breadcrumbs]="[{ label: 'Divisions', path: '/divisions' }, { label: division.title }]"
+  ></app-page-hero>
+
+  <!-- SERVICES -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid" [class.two-col]="division.electricalServices?.length">
+
+        <div class="services-col reveal">
+          <span class="col-tag">Core Services</span>
+          <h2 class="section-title">What <em>We Deliver</em></h2>
+          <ul class="service-list">
+            <li *ngFor="let s of division.services">
+              <span class="arrow">→</span>{{ s }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="services-col reveal d1" *ngIf="division.electricalServices?.length">
+          <span class="col-tag">Electrical Engineering</span>
+          <h2 class="section-title">Electrical <em>Works</em></h2>
+          <ul class="service-list">
+            <li *ngFor="let s of division.electricalServices">
+              <span class="arrow">→</span>{{ s }}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="quote-cta">
+    <div class="container">
+      <div class="cta-band" [style.background]="division.color">
+        <div class="cta-text">
+          <i class="bi {{ division.icon }} div-icon"></i>
+          <div>
+            <h2>Ready to get started with <em>{{ division.title }}?</em></h2>
+            <p>Our team responds to all enquiries within 24 hours.</p>
+          </div>
+        </div>
+        <a class="btn btn-accent" routerLink="/contact">Request a Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER DIVISIONS -->
+  <section class="other-section">
+    <div class="container">
+      <div class="other-header reveal">
+        <h2 class="section-title">Explore Our Other <em>Divisions</em></h2>
+        <a class="btn btn-outline" routerLink="/divisions">View All →</a>
+      </div>
+      <div class="other-grid reveal d1">
+        <a class="other-card" *ngFor="let d of otherDivisions" [routerLink]="'/divisions/' + d.id">
+          <div class="other-icon-wrap" [style.background]="d.color">
+            <i class="bi {{ d.icon }}"></i>
+          </div>
+          <div class="other-info">
+            <strong>{{ d.title }}</strong>
+            <p>{{ d.tagline }}</p>
+          </div>
+          <span class="other-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</ng-container>
