@@ -15,6 +15,7 @@ export interface Division {
 
 export interface Project {
   icon: string;
+  imgUrl: string;
   category: string;
   title: string;
   description: string;
@@ -113,12 +114,48 @@ export class DataService {
   ];
 
   projects: Project[] = [
-    { icon: 'bi-sun', category: 'Solar Energy', title: 'Commercial Solar PV Installation', description: 'Full-scale solar system with inverter and battery backup for commercial premises.', color: '#eef6e0' },
-    { icon: 'bi-plug', category: 'Electrical', title: 'Estate Electrical Infrastructure', description: 'Complete wiring and distribution board installation for a 40-unit residential estate.', color: '#eef4fc' },
-    { icon: 'bi-camera-video', category: 'Security', title: 'CCTV & Access Control Deployment', description: '40-camera surveillance with biometric access control across a multi-storey facility.', color: '#ededef' },
-    { icon: 'bi-lightbulb', category: 'Solar Lighting', title: 'Solar Street Lighting Project', description: 'Installation of solar-powered street lighting across a residential community.', color: '#eef6e0' },
-    { icon: 'bi-wifi', category: 'ICT Services', title: 'Enterprise Network Infrastructure', description: 'Structured cabling, networking and server room setup for a regional organization.', color: '#eef4fc' },
-    { icon: 'bi-cpu', category: 'Innovation Lab', title: 'Smart Energy Monitoring System', description: 'IoT-based energy monitoring prototype with real-time analytics dashboard.', color: '#f5eeff' }
+    {
+      icon: 'bi-sun', category: 'Solar Energy',
+      title: 'Commercial Solar PV Installation',
+      description: 'Full-scale solar system with inverter and battery backup for commercial premises.',
+      color: '#eef6e0',
+      imgUrl: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&auto=format&fit=crop&q=80'
+    },
+    {
+      icon: 'bi-plug', category: 'Electrical',
+      title: 'Estate Electrical Infrastructure',
+      description: 'Complete wiring and distribution board installation for a 40-unit residential estate.',
+      color: '#eef4fc',
+      imgUrl: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&auto=format&fit=crop&q=80'
+    },
+    {
+      icon: 'bi-camera-video', category: 'Security',
+      title: 'CCTV & Access Control Deployment',
+      description: '40-camera surveillance with biometric access control across a multi-storey facility.',
+      color: '#ededef',
+      imgUrl: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&auto=format&fit=crop&q=80'
+    },
+    {
+      icon: 'bi-lightbulb', category: 'Solar Lighting',
+      title: 'Solar Street Lighting Project',
+      description: 'Installation of solar-powered street lighting across a residential community.',
+      color: '#eef6e0',
+      imgUrl: 'https://images.unsplash.com/photo-1504608524841-42584120d693?w=600&auto=format&fit=crop&q=80'
+    },
+    {
+      icon: 'bi-wifi', category: 'ICT Services',
+      title: 'Enterprise Network Infrastructure',
+      description: 'Structured cabling, networking and server room setup for a regional organization.',
+      color: '#eef4fc',
+      imgUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80'
+    },
+    {
+      icon: 'bi-cpu', category: 'Innovation Lab',
+      title: 'Smart Energy Monitoring System',
+      description: 'IoT-based energy monitoring prototype with real-time analytics dashboard.',
+      color: '#f5eeff',
+      imgUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=80'
+    }
   ];
 
   opportunities: Opportunity[] = [

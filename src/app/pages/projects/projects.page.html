@@ -26,8 +26,8 @@
         *ngFor="let p of filtered; let i = index"
         [style.transition-delay]="(i * 0.08) + 's'"
       >
-        <div class="project-thumb" [style.background]="p.color">
-          <span class="thumb-icon">{{ p.icon }}</span>
+        <div class="project-thumb">
+          <img [src]="p.imgUrl" [alt]="p.title" loading="lazy" />
         </div>
         <div class="project-info">
           <span class="project-cat">{{ p.category }}</span>
@@ -40,7 +40,7 @@
 
     <!-- Empty state -->
     <div class="empty-state" *ngIf="filtered.length === 0">
-      <span>🔍</span>
+      <i class="bi bi-search"></i>
       <p>No projects in this category yet. <a routerLink="/contact">Request a project enquiry →</a></p>
     </div>
 
