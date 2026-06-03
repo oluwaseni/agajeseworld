@@ -98,8 +98,8 @@
   display: flex; flex-direction: column; z-index: 3;
   strong { font-size: 1.1rem; font-weight: 800; color: var(--text); }
   span { font-size: .68rem; color: var(--text-muted); }
-  &.clients { top: 20%; left: -10px; }
-  &.rating { bottom: 35%; right: -5px; }
+  &.clients { top: 20%; left: -10px; animation: float 4s ease-in-out infinite; }
+  &.rating { bottom: 35%; right: -5px; animation: float-delayed 4.5s ease-in-out 0.6s infinite; }
 }
 
 /* TICKER */
@@ -181,11 +181,16 @@
 
   .stat-block {
     text-align: center;
-    strong { display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+    strong {
+      display: block; font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent);
+      animation: count-in 0.5s ease both;
+    }
     span { font-size: .8rem; color: var(--text-muted); }
   }
   .stat-sep { width: 1px; height: 50px; background: var(--border); }
 }
+
+.stats-animated .stat-block strong { animation: count-in 0.5s ease both; }
 
 /* ===== INNOVATION CTA ===== */
 .lab-cta-section { padding: 100px 0; background: var(--bg); }

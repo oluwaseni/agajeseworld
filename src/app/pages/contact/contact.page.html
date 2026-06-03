@@ -15,35 +15,28 @@
         <h2 class="info-heading">Contact <em>Details</em></h2>
         <div class="contact-items">
           <div class="contact-item">
-            <div class="ci-icon">📍</div>
+            <div class="ci-icon"><i class="bi bi-geo-alt"></i></div>
             <div class="ci-detail">
               <span class="ci-label">Office Address</span>
               <span class="ci-value">AGAJESEWORLD Headquarters, Nigeria, Africa</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">📞</div>
-            <div class="ci-detail">
-              <span class="ci-label">Phone</span>
-              <span class="ci-value">Contact us for phone details</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">✉️</div>
-            <div class="ci-detail">
-              <span class="ci-label">Email</span>
-              <span class="ci-value">info&#64;agajeseworld.com</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">💬</div>
+            <div class="ci-icon"><i class="bi bi-whatsapp"></i></div>
             <div class="ci-detail">
               <span class="ci-label">WhatsApp</span>
-              <span class="ci-value">Available via WhatsApp</span>
+              <a class="ci-value ci-link" href="https://wa.me/2348055891800" target="_blank" rel="noopener">+234 805 589 1800</a>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">🌐</div>
+            <div class="ci-icon"><i class="bi bi-envelope"></i></div>
+            <div class="ci-detail">
+              <span class="ci-label">Email</span>
+              <a class="ci-value ci-link" href="mailto:agajese@gmail.com">agajese&#64;gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="bi bi-globe"></i></div>
             <div class="ci-detail">
               <span class="ci-label">Website</span>
               <span class="ci-value">www.agajeseworld.com</span>
@@ -53,21 +46,21 @@
 
         <!-- Division quick links -->
         <div class="division-links">
-          <h4>Quick Division Links</h4>
-          <a routerLink="/divisions" class="dlink">☀️ Solar Energy &amp; Electrical</a>
-          <a routerLink="/divisions" class="dlink">💻 ICT / IT Services</a>
-          <a routerLink="/divisions" class="dlink">🛡️ Security Systems</a>
-          <a routerLink="/innovation-lab" class="dlink">🔬 Innovation Lab</a>
+          <h4>Our Divisions</h4>
+          <a routerLink="/divisions/energy"  class="dlink"><i class="bi bi-lightning-charge"></i> AGAJESE Energy</a>
+          <a routerLink="/divisions/systems" class="dlink"><i class="bi bi-hdd-network"></i> AGAJESE Systems</a>
+          <a routerLink="/divisions/tek"     class="dlink"><i class="bi bi-shield-check"></i> AGAJESE Tek</a>
+          <a routerLink="/divisions/labs"    class="dlink"><i class="bi bi-flask"></i> AGAJESE Labs</a>
         </div>
       </div>
 
       <!-- FORM SIDE -->
       <div class="contact-form reveal d1">
         <div class="success-msg" [class.show]="submitted">
-          ✅ Message sent! We'll be in touch within 24 hours.
+          <i class="bi bi-check-circle"></i> Message sent! We'll be in touch within 24 hours.
         </div>
         <div class="error-msg" [class.show]="error">
-          ⚠️ Please fill in your Name, Email and Message fields.
+          <i class="bi bi-exclamation-triangle"></i> Please fill in your Name, Email and Message fields.
         </div>
 
         <h3 class="form-heading">Send Us a Message</h3>
@@ -91,10 +84,10 @@
             <label>Division</label>
             <select [(ngModel)]="form.division">
               <option value="">— Select Division —</option>
-              <option>Solar Energy &amp; Electrical Systems</option>
-              <option>ICT / IT Services</option>
-              <option>Innovation &amp; Security Systems</option>
-              <option>Research, Innovation &amp; Inventions</option>
+              <option>AGAJESE Energy</option>
+              <option>AGAJESE Systems</option>
+              <option>AGAJESE Tek</option>
+              <option>AGAJESE Labs</option>
               <option>General / Investment Inquiry</option>
             </select>
           </div>
@@ -114,6 +107,9 @@
           <textarea [(ngModel)]="form.message" rows="5" placeholder="Tell us about your project, requirements, or inquiry..."></textarea>
         </div>
         <button class="btn btn-accent submit-btn" (click)="submit()">Send Message →</button>
+        <a class="btn btn-whatsapp" href="https://wa.me/2348055891800" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+        </a>
         <p class="form-note">We respond to all messages within 24 hours on business days.</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+﻿import { Component, OnInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PageHeroComponent } from '../../components/page-hero/page-hero.component';
@@ -29,7 +29,7 @@ export class ProjectsPage implements OnInit {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
     setTimeout(() => {
-      this.el.nativeElement.querySelectorAll('.reveal')
+      this.el.nativeElement.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger')
         .forEach((el: Element) => observer.observe(el));
     }, 100);
   }

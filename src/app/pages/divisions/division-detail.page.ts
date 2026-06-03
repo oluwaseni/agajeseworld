@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+﻿import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DataService, Division } from '../../services/data.service';
@@ -49,7 +49,7 @@ export class DivisionDetailPage implements OnInit {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
-    this.el.nativeElement.querySelectorAll('.reveal')
+    this.el.nativeElement.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger')
       .forEach((el: Element) => observer.observe(el));
   }
 }

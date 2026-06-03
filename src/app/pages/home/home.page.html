@@ -70,8 +70,8 @@
       <a class="btn btn-outline" routerLink="/divisions">View All Divisions →</a>
     </div>
 
-    <div class="divisions-preview">
-      <a class="div-card" *ngFor="let d of divisions" [routerLink]="'/divisions'">
+    <div class="divisions-preview stagger">
+      <a class="div-card" *ngFor="let d of divisions" [routerLink]="'/divisions/' + d.id">
         <div class="div-card-top" [style.background]="d.color">
           <span class="div-num">{{ d.number }}</span>
           <i class="bi {{ d.icon }} div-icon-big"></i>
@@ -91,7 +91,7 @@
 <section class="section-bg">
   <div class="container">
     <div class="why-grid">
-      <div class="why-text">
+      <div class="why-text reveal-left">
         <span class="label-tag blue">Why Choose Us</span>
         <h2 class="section-title">Engineering Excellence,<br><em>Every Time.</em></h2>
         <p class="section-sub">
@@ -100,7 +100,7 @@
         </p>
         <a class="btn btn-dark" routerLink="/about">Learn About Us →</a>
       </div>
-      <div class="why-cards">
+      <div class="why-cards stagger reveal-right">
         <div class="why-card" *ngFor="let w of whyUs">
           <i class="bi {{ w.icon }} why-icon"></i>
           <div>
@@ -117,21 +117,13 @@
 <section class="stats-section">
   <div class="container">
     <div class="stats-band">
-      <div class="stat-block">
-        <strong>150+</strong><span>Projects Completed</span>
-      </div>
-      <div class="stat-sep"></div>
-      <div class="stat-block">
-        <strong>600+</strong><span>Clients Served</span>
-      </div>
-      <div class="stat-sep"></div>
-      <div class="stat-block">
-        <strong>4</strong><span>Core Divisions</span>
-      </div>
-      <div class="stat-sep"></div>
-      <div class="stat-block">
-        <strong>100%</strong><span>Quality Assured</span>
-      </div>
+      <ng-container *ngFor="let s of stats; let i = index">
+        <div class="stat-sep" *ngIf="i > 0"></div>
+        <div class="stat-block">
+          <strong>{{ s.display }}{{ s.suffix }}</strong>
+          <span>{{ s.label }}</span>
+        </div>
+      </ng-container>
     </div>
   </div>
 </section>
@@ -140,10 +132,10 @@
 <section class="lab-cta-section">
   <div class="container">
     <div class="lab-cta-inner">
-      <div class="lab-cta-img">
+      <div class="lab-cta-img reveal-left">
         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&auto=format&fit=crop&q=80" alt="Innovation Lab" />
       </div>
-      <div class="lab-cta-text">
+      <div class="lab-cta-text reveal-right">
         <span class="label-tag green">Innovation Lab</span>
         <h2 class="section-title">Building Tomorrow's<br><em>Technology Today</em></h2>
         <p class="section-sub">Our R&D division is actively developing new inventions, smart energy systems, and proprietary technology — open to strategic collaborations and investment.</p>
@@ -159,7 +151,7 @@
 <!-- ===== INVESTOR TEASER ===== -->
 <section class="investor-teaser">
   <div class="container">
-    <div class="investor-banner">
+    <div class="investor-banner reveal-scale">
       <div class="ib-text">
         <h2>Ready To <em>Partner</em> in Building the Future of Technology?</h2>
         <p>Multiple investment and strategic partnership opportunities available across our innovation and engineering divisions.</p>

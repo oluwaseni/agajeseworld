@@ -41,7 +41,8 @@ export class AboutPage implements OnInit {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
     setTimeout(() => {
-      this.el.nativeElement.querySelectorAll('.reveal')
+      this.el.nativeElement
+        .querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger')
         .forEach((el: Element) => observer.observe(el));
     }, 100);
   }

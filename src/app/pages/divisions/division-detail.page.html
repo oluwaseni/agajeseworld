@@ -60,7 +60,7 @@
         <h2 class="section-title">Explore Our Other <em>Divisions</em></h2>
         <a class="btn btn-outline" routerLink="/divisions">View All →</a>
       </div>
-      <div class="other-grid reveal d1">
+      <div class="other-grid stagger">
         <a class="other-card" *ngFor="let d of otherDivisions" [routerLink]="'/divisions/' + d.id">
           <div class="other-icon-wrap" [style.background]="d.color">
             <i class="bi {{ d.icon }}"></i>
